@@ -1,39 +1,39 @@
-const partnerki = [
+const partners = [
   {
     id: 1,
     name: "Anna",
     age: 27,
-    city: "Warszawa",
-    hobby: ["gotowanie", "podróże", "joga"],
-    skills: ["gotowanie", "języki obce", "muzyka"],
+    city: "New York",
+    hobby: ["cooking", "traveling", "yoga"],
+    skills: ["cooking", "languages", "music"],
   },
   {
     id: 2,
-    name: "Kasia",
+    name: "Kate",
     age: 31,
-    city: "Kraków",
-    hobby: ["sport", "czytanie"],
-    skills: ["sport", "programowanie"],
+    city: "Chicago",
+    hobby: ["sports", "reading"],
+    skills: ["sports", "programming"],
   },
   {
     id: 3,
-    name: "Ola",
+    name: "Olivia",
     age: 24,
-    city: "Wrocław",
-    hobby: ["muzyka", "fotografia"],
-    skills: ["muzyka", "fotografia", "gotowanie"],
+    city: "Los Angeles",
+    hobby: ["music", "photography"],
+    skills: ["music", "photography", "cooking"],
   },
   {
     id: 4,
-    name: "Magda",
+    name: "Maggie",
     age: 29,
-    city: "Warszawa",
-    hobby: ["podróże", "sport"],
-    skills: ["języki obce", "sport"],
+    city: "New York",
+    hobby: ["traveling", "sports"],
+    skills: ["languages", "sports"],
   },
 ];
 
-const filterPartnerki = (arr, filters = {}) => {
+const filterPartners = (arr, filters = {}) => {
   return arr.filter((p) => {
     if (filters.minAge !== undefined && p.age < filters.minAge) return false;
     if (filters.maxAge !== undefined && p.age > filters.maxAge) return false;
@@ -54,3 +54,18 @@ const filterPartnerki = (arr, filters = {}) => {
     return true;
   });
 };
+
+console.log(filterPartners(partners, { minAge: 27 }));
+
+console.log(filterPartners(partners, { city: "New York" }));
+
+console.log(filterPartners(partners, { skills: ["cooking", "sports"] }));
+
+console.log(
+  filterPartners(partners, {
+    minAge: 24,
+    maxAge: 30,
+    city: "New York",
+    skills: ["languages"],
+  }),
+);
