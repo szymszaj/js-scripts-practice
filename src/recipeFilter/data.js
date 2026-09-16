@@ -1,0 +1,38 @@
+export const recipes = [
+  {
+    id: 1,
+    name: "Spaghetti Carbonara",
+    cuisine: "Italian",
+    cookTime: 25,
+    difficulty: "easy",
+    ingredients: ["pasta", "eggs", "bacon", "parmesan"],
+    tags: ["dinner", "comfort food"],
+  },
+  {
+    id: 2,
+    name: "Chicken Tikka Masala",
+    cuisine: "Indian",
+    cookTime: 45,
+    difficulty: "medium",
+    ingredients: ["chicken", "yogurt", "tomato", "spices"],
+    tags: ["dinner", "spicy"],
+  },
+  {
+    id: 3,
+    name: "Greek Salad",
+    cuisine: "Greek",
+    cookTime: 15,
+    difficulty: "easy",
+    ingredients: ["cucumber", "tomato", "feta", "olives"],
+    tags: ["lunch", "vegetarian", "healthy"],
+  },
+  {
+    id: 4,
+    name: "Beef Wellington",
+    cuisine: "British",
+    cookTime: 90,
+    difficulty: "hard",
+    ingredients: ["beef", "puff pastry", "mushrooms", "mustard"],
+    tags: ["dinner", "special occasion"],
+  },
+];
